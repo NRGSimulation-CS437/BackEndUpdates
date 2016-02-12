@@ -8,11 +8,11 @@
 module.exports = {
 
   attributes: {
-  	name: {
-  		type:"string",
-  		required: true
-  	},
-  	room: {
+    name: {
+      type:"string",
+      required: true
+    },
+    room: {
       type: "string",
       required: true
     },
@@ -25,6 +25,14 @@ module.exports = {
       required: true
     },
     image: {
+      type: "string",
+      required: true
+    },
+    watts: {
+      type: "string",
+      required: true
+    },
+    trigger: {
       type: "string",
       required: true
     }
