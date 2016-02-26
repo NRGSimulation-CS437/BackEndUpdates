@@ -32,9 +32,32 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': {
-    view: 'homepage'
-  }
+  '/': {view: 'homepage'},
+  'post /x/devicelistadd': 'DeviceListController.add',
+  'post /x/devicelistdelete': 'DeviceListController.delete',
+  'post /x/devicelistdreturnAll': 'DeviceListController.returnAll',
+  
+  //devices not sure why kevia added two to this but I guess
+
+  'post /x/deviceadd': 'DevicesController.add',
+  'post /x/devicedelete': 'DevicesController.delete',
+  'post /x/devicedreturnAll': 'DevicesController.returnAll',
+
+  'post /x/houseadd': 'HouseController.add',
+  'post /x/housedelete': 'HouseController.delete',
+  'post /x/housereturnAll': 'HouseController.returnAll',
+
+  'post /x/roomadd': 'RoomController.add',
+  'post /x/roomdelete': 'RoomController.delete',
+  'post /x/roomreturnAll': 'RoomController.returnAll',
+
+  'post /x/useradd': 'UserController.add',
+  'post /x/userdelete': 'UserController.delete',
+  'post /x/userreturnAll': 'UserController.returnAll',  
+  'post /x/login': 'UserController.login',
+  'post /x/logout': 'UserController.logout'
+
+  //we might not need all this but created it for now. 
 
   /***************************************************************************
   *                                                                          *
