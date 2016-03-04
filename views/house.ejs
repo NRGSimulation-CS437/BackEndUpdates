@@ -1,0 +1,31 @@
+This is so you can add a fucken house
+  	<form action="/x/houseadd" method="post">
+  		house name :<br>
+  		<input type="text" name="name" value=""><br>
+  		house image:<br>
+ 		<input type="text" name="image" value=""><br><br>
+  		<input type="submit" value="Submit">
+	</form> 
+
+
+<br><br><br><br><br>
+bellow is the view for all the houses for this fucker.
+<br><br><br><br>
+
+<% if (req.session.houses.length > 0) { %>
+
+    <% _.each(req.session.houses, function (corndog) { %>
+    <br>
+    <li>the Image : <%= corndog.image %></li>
+    <li>the Name : <%= corndog.name %></li>
+    <li>the Ownwer : <%= corndog.owner %></li>
+    <br>
+    -----------------------------------------
+    <% }) %>
+
+
+<% } else { %>
+
+You have no houses you freake deadbeat!!!!
+
+<% } %>
