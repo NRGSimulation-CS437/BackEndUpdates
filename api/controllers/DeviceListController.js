@@ -25,7 +25,13 @@ module.exports = {
     	return res.json({
       		todo: 'add() is not implemented yet!'
     	});
-  	}
-  		
+  	},
+
+    test: function (req, res) {
+      return res.view('test', {
+        user: "buttface",
+        corndogs: "nothing much to see here"
+      });
+    }
 };
 
