@@ -1,18 +1,98 @@
-<div>
-  <h1>You have to log in bitch/h1>
-  <h2>watch my dick</h2>
-  fuck I hate forms and shit
+<head>
+	<title>Login/Register</title>
 
-  	<form action="/x/login" method="post">
-  		Username:<br>
-  		<input type="text" name="username" value=""><br>
-  		Password:<br>
- 		<input type="password" name="password" value=""><br><br>
-  		<input type="submit" value="Submit">
-	</form> 
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="description" content="NRG Site" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=9">
+	<link rel="shortcut icon" href="images//NRGLogo.png" />
+
+	<!-- NRG CSS---->
+	<link rel="stylesheet" type="text/css" href="../assets/styles/loginStyle/login.css">
 
 
-  <ul> 
-    <li><a href='/register'>Register for a new Accoutn</a></li>
-  </ul>
+	<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+	<!--Login/Register-->
+
+	<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,700' rel='stylesheet' type='text/css'>
+
+</head>
+<body background="images/loginBack.jpg">
+<!--Header-->
+<!--<div id="header">-->
+
+<!--</div>-->
+
+<!--Content-->
+<div class="container">
+	<div class="profile">
+		<button class="profile__avatar" id="toggleProfile">
+			<img src="images/loginLogo.png" alt="Avatar" />
+		</button>
+		<div class="profile__form">
+			<div class="profile__fields">
+
+                <form action="/x/login" method="post">
+
+                    <div class="field">
+                        <input type="text" id="fieldUser" name="username" class="input" required pattern=.*\S.* />
+                        <label for="fieldUser" class="label">Username</label>
+                    </div>
+                    <div class="field">
+                        <input type="password" name="password" id="fieldPassword" class="input" required pattern=.*\S.* />
+                        <label for="fieldPassword" class="label">Password</label>
+                    </div>
+                    <div class="profile__footer style="center">
+                        <button class="btn" type="submit" value="Submit" onclick="toggleForms()">Login</button>
+                        <button class="btn" style="padding-left: 25px">Register</button>
+                    </div>
+                </form>
+
+                <!--<div id="registerForm">-->
+				<!--<div class="field">-->
+				<!--<input type="text" id="fieldUser" class="input" required pattern=.*\S.* />-->
+				<!--<label for="fieldUser" class="label">Create Username</label>-->
+				<!--</div>-->
+				<!--<div class="field">-->
+				<!--<input type="password" id="fieldPassword" class="input" required pattern=.*\S.* />-->
+				<!--<label for="fieldPassword" class="label">Password</label>-->
+				<!--</div>-->
+				<!--<div class="field">-->
+				<!--<input type="password" id="fieldPassword" class="input" required pattern=.*\S.* />-->
+				<!--<label for="fieldPassword" class="label">Re-enter Password</label>-->
+				<!--</div>-->
+				<!--<div class="profile__footer">-->
+				<!--<button class="btn">Login</button>-->
+				<!--<button class="btn" style="padding-left: 25px">Register</button>-->
+				<!--</div>-->
+
+				<!--</div>-->
+			</div>
+		</div>
+	</div>
 </div>
+
+
+
+
+<!--footer--->
+<!--<div id="footer"></div>-->
+
+
+<!--scripts-->
+<!--<script>-->
+<!--$("#header").load("header.html");-->
+<!--$("#footer").load("footer.html");-->
+<!--</script>-->
+<script src="../assets/js/loginJs/login.js"></script>
+
+<!---SCript to switch views-->
+<script type="text/javascript">
+	$(document).ready(function() {
+		document.getElementsByClassName('profile__form')[0].style.visibility='hidden';
+</script>
+
+</div>
+</body>
