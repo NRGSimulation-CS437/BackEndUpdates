@@ -19,57 +19,62 @@
 	<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,700' rel='stylesheet' type='text/css'>
 
 </head>
-<body background="images/loginBack.jpg">
+<body background="images/loginBack.jpg" style="position: relative;
+  margin: 0;
+  font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+  min-height: 100%;
+  color: #777;">
 <!--Header-->
 <!--<div id="header">-->
 
 <!--</div>-->
 
 <!--Content-->
-<div class="container">
+<div class="loginContainer">
 	<div class="profile">
 		<button class="profile__avatar" id="toggleProfile">
-			<img src="images/loginLogo.png" alt="Avatar" />
+			<img id="logoImg" src="images/loginLogo.png" alt="Avatar" />
 		</button>
 		<div class="profile__form">
+			<!--login fields--->
 			<div class="profile__fields">
-
-                <form action="/x/login" method="post">
-
-                    <div class="field">
-                        <input type="text" id="fieldUser" name="username" class="input" required pattern=.*\S.* />
-                        <label for="fieldUser" class="label">Username</label>
-                    </div>
-                    <div class="field">
-                        <input type="password" name="password" id="fieldPassword" class="input" required pattern=.*\S.* />
-                        <label for="fieldPassword" class="label">Password</label>
-                    </div>
-                    <div class="profile__footer style="center">
-                        <button class="btn" type="submit" value="Submit" onclick="toggleForms()">Login</button>
-                        <button class="btn" style="padding-left: 25px">Register</button>
-                    </div>
-                </form>
-
-                <!--<div id="registerForm">-->
-				<!--<div class="field">-->
-				<!--<input type="text" id="fieldUser" class="input" required pattern=.*\S.* />-->
-				<!--<label for="fieldUser" class="label">Create Username</label>-->
-				<!--</div>-->
-				<!--<div class="field">-->
-				<!--<input type="password" id="fieldPassword" class="input" required pattern=.*\S.* />-->
-				<!--<label for="fieldPassword" class="label">Password</label>-->
-				<!--</div>-->
-				<!--<div class="field">-->
-				<!--<input type="password" id="fieldPassword" class="input" required pattern=.*\S.* />-->
-				<!--<label for="fieldPassword" class="label">Re-enter Password</label>-->
-				<!--</div>-->
-				<!--<div class="profile__footer">-->
-				<!--<button class="btn">Login</button>-->
-				<!--<button class="btn" style="padding-left: 25px">Register</button>-->
-				<!--</div>-->
-
-				<!--</div>-->
+				<form action="/x/login" method="post">
+				<div class="field">
+					<input type="text" id="fieldUser" class="input" required pattern=.*\S.* />
+					<label for="fieldUser" class="label">Username</label>
+				</div>
+				<div class="field">
+					<input type="password" id="fieldPassword" class="input" required pattern=.*\S.* />
+					<label for="fieldPassword" class="label">Password</label>
+				</div>
+					</form>
 			</div>
+			<!--end of login fields--->
+
+			<!--start of register-->
+			<div class="registerForm">
+				<div class="field">
+					<input type="text" id="fieldUser" class="input" required pattern=.*\S.* />
+					<label for="fieldUser" class="label">Create Username</label>
+				</div>
+				<div class="field">
+					<input type="password" id="fieldPassword" class="input" required pattern=.*\S.* />
+					<label for="fieldPassword" class="label">Password</label>
+				</div>
+				<div class="field">
+					<input type="password" id="fieldPassword" class="input" required pattern=.*\S.* />
+					<label for="fieldPassword" class="label">Re-enter Password</label>
+				</div>
+
+			</div>
+
+			<!--end of Register-->
+
+			<div class="profile__footer">
+				<button class="btn" onclick="myFunction()">Login</button>
+				<button class="btn" onclick="my2Function()" style="padding-left: 25px">Register</button>
+			</div>
+
 		</div>
 	</div>
 </div>
@@ -87,11 +92,20 @@
 <!--$("#footer").load("footer.html");-->
 <!--</script>-->
 <script src="../assets/js/loginJs/login.js"></script>
-
 <!---SCript to switch views-->
-<script type="text/javascript">
-	$(document).ready(function() {
-		document.getElementsByClassName('profile__form')[0].style.visibility='hidden';
+<script>
+	function myFunction() {
+		document.getElementsByClassName('profile__fields')[0].style.visibility='visible';
+		document.getElementsByClassName('registerForm')[0].style.visibility='hidden';
+
+	}
+</script>
+<script>
+	function my2Function() {
+		document.getElementsByClassName('profile__fields')[0].style.visibility='hidden';
+		document.getElementsByClassName('registerForm')[0].style.visibility='visible';
+
+	}
 </script>
 
 </div>

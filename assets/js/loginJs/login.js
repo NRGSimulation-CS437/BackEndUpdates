@@ -10,7 +10,6 @@ document.getElementById('toggleProfile').addEventListener('click', function () {
 });
 
 
-document.getb
 //document.getElementsByClassName('profile__fields')[0].style.visibility='hidden';
-
+document.getElementsByClassName('registerForm')[0].style.visibility='hidden';
 

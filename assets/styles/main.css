@@ -161,7 +161,6 @@ legend {
 }
 
 button,
-input,
 select,
 textarea {
   margin: 0;
@@ -170,9 +169,6 @@ textarea {
 }
 
 button,
-input {
-  line-height: normal;
-}
 
 button,
 select {
@@ -180,41 +176,14 @@ select {
 }
 
 button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  cursor: pointer;
-  -webkit-appearance: button;
-}
 
 button[disabled],
-html input[disabled] {
-  cursor: default;
-}
 
-input[type="checkbox"],
-input[type="radio"] {
-  padding: 0;
-  box-sizing: border-box;
-}
 
-input[type="search"] {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  -webkit-appearance: textfield;
-}
 
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
 
 button::-moz-focus-inner,
-input::-moz-focus-inner {
-  padding: 0;
-  border: 0;
-}
+
 
 textarea {
   overflow: auto;
@@ -319,10 +288,9 @@ body {
   font-size: 16px;
   line-height: 1.428571429;
   color: #58595b;
-  background-color: #feffd4;
+  background-color: #ffffff;
 }
 
-input,
 button,
 select,
 textarea {
@@ -2263,7 +2231,7 @@ textarea.input-lg {
 
 .btn {
   display: inline-block;
-  padding: 6px 12px;
+  padding: 1px 12px;
   margin-bottom: 0;
   font-size: 16px;
   font-weight: normal;
@@ -9023,7 +8991,7 @@ html {
 
 ::selection {
   color: white;
-  background: black;
+  background: white;
 }
 
 ::-moz-selection {
@@ -9096,7 +9064,7 @@ input {
 }
 
 input:focus {
-  background: white;
+  background: transparent;
   outline: none;
 }
 
@@ -10707,7 +10675,7 @@ aside .ellipsis {
   width: 100%;
   height: 35px;
   padding: 5px;
-  background: #ffffff;
+  background: transparent;
   border: 1px solid #d1d2d4;
 }
 

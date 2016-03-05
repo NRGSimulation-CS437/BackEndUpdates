@@ -8,18 +8,11 @@ html {
   height: 100%;
 }
 
-body {
-  position: relative;
-  margin: 0;
-  font-family: 'Work Sans', Arial, Helvetica, sans-serif;
-  min-height: 100%;
-  color: #777;
-}
-img {
+#logoImg {
   vertical-align: middle;
   max-width: 100%;
 }
-button {
+.profile .profile__avatar{
   cursor: pointer;
   border: 0;
   padding: 0;
@@ -27,7 +20,7 @@ button {
 }
 
 /* Container */
-.container {
+.loginContainer {
   position: absolute;
   width: 24em;
   left: 50%;
@@ -46,13 +39,20 @@ button {
   visibility: visible;
   height: auto;
   opacity: 1;
-  transform: translateY(-6em);
+  transform: translateY(-4em);
   padding-top: 12em;
 }
 .profile--open .profile__fields {
   opacity: 1;
   visibility: visible;
+  padding-top: 25px;
 }
+
+.profile--open .registerForm {
+    opacity: 1;
+    visibility: visible;
+}
+
 .profile--open .profile__avatar {
   transform: translate(-50%, -1.5em);
   border-radius: 50%;
@@ -77,6 +77,15 @@ button {
   visibility: hidden;
   transition: opacity .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+
+.registerForm {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    top: 186px;
+    position: fixed;
+}
+
 .profile__avatar {
   position: absolute;
   z-index: 1;
@@ -94,12 +103,12 @@ button {
   outline: 0;
 }
 .profile__footer {
-  padding-top: 1em;
+  padding-top: 2em;
 }
 
 
 /* Form */
-.field {
+.loginfield {
   position: relative;
   margin-bottom: 2em;
 }
@@ -136,7 +145,7 @@ input:valid + .label {
   color: #ccc;
 }
 
-/* Button */
+/*login Button */
 .btn {
   border: 0;
   font-size: 0.75rem;
@@ -157,7 +166,6 @@ input:valid + .label {
 .btn:focus {
   background: #A678E2;
 }
-
 
 /* Intro animation */
 @keyframes intro {

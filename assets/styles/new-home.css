@@ -517,8 +517,7 @@ form.social-sharing {
 form.social-sharing label {
   display: block;
   margin: 30px 0 5px 0; }
-form.social-sharing label[for] {
-  display: block;
+form.social-sharing label[for] {d
   margin-top: 10px; }
 form.social-sharing input {
   display: block;
