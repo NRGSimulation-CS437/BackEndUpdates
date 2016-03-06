@@ -40,15 +40,18 @@
 			<div class="profile__fields">
 				<form action="/x/login" method="post">
 				<div class="field">
-					<input type="text" id="fieldUser" class="input" required pattern=.*\S.* />
+					<input type="text" id="fieldUser" name="username" class="input" required pattern=.*\S.* />
 					<label for="fieldUser" class="label">Username</label>
 				</div>
 				<div class="field">
-					<input type="password" id="fieldPassword" class="input" required pattern=.*\S.* />
+					<input type="password" id="fieldPassword"  name="password" class="input" required pattern=.*\S.* />
 					<label for="fieldPassword" class="label">Password</label>
 				</div>
-					</form>
-			</div>
+				<div class="field">
+					<input type="submit" name="Submit">
+				</div>
+				</form>
+			</div>v
 			<!--end of login fields--->
 
 			<!--start of register-->
