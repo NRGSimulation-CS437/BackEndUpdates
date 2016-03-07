@@ -4,12 +4,11 @@ req.session.valid = false;
 
 <% if (!req.session.valid) { %>
 
-you need to log in outside of login.ejs
 
---------------------------------------------
 <%- partial ('login.ejs') %>
 
---------------------------------------------
+
+
 <% } else { %>
 Yeah you are cool session has been recorded
 <br>

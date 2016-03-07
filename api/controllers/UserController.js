@@ -93,7 +93,7 @@ module.exports = {
       console.log('logged out :' + req.session.id);
         console.log( req.session)
 
-      return res.redirect('homepage');
+      return res.redirect('/');
 
   	} 
 
