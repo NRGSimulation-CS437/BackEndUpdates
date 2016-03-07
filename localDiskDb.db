@@ -1,0 +1,316 @@
+{
+  "data": {
+    "devicelist": [
+      {
+        "name": "Laptop",
+        "watts": "80",
+        "image": "/images/GivenDevices/Laptop.png",
+        "createdAt": "2016-03-07T05:23:40.889Z",
+        "updatedAt": "2016-03-07T05:33:28.227Z",
+        "id": 1
+      },
+      {
+        "name": "Refrigerator",
+        "watts": "500",
+        "image": "/images/GivenDevices/Refrigerator.png",
+        "createdAt": "2016-03-07T05:24:59.138Z",
+        "updatedAt": "2016-03-07T05:34:05.984Z",
+        "id": 2
+      },
+      {
+        "name": "Light Bulb",
+        "watts": "15",
+        "image": "/images/GivenDevices/Light Bulb.png",
+        "createdAt": "2016-03-07T05:32:46.718Z",
+        "updatedAt": "2016-03-07T05:37:44.529Z",
+        "id": 4
+      },
+      {
+        "name": "Phone Charger",
+        "watts": "5",
+        "image": "/images/GivenDevices/Phone Charger.jpg",
+        "createdAt": "2016-03-07T05:37:12.467Z",
+        "updatedAt": "2016-03-07T05:41:04.423Z",
+        "id": 5
+      },
+      {
+        "name": "Microwave",
+        "watts": "1000",
+        "image": "/images/GivenDevices/Microwave.png",
+        "createdAt": "2016-03-07T05:41:46.487Z",
+        "updatedAt": "2016-03-07T05:41:46.487Z",
+        "id": 6
+      },
+      {
+        "name": "PC",
+        "watts": "250",
+        "image": "/images/GivenDevices/PC.png",
+        "createdAt": "2016-03-07T05:42:20.418Z",
+        "updatedAt": "2016-03-07T05:42:20.418Z",
+        "id": 7
+      },
+      {
+        "name": "Coffee Maker",
+        "watts": "30",
+        "image": "/images/GivenDevices/Coffee Maker.png",
+        "createdAt": "2016-03-07T05:42:53.291Z",
+        "updatedAt": "2016-03-07T05:42:53.291Z",
+        "id": 8
+      }
+    ],
+    "devices": [
+      {
+        "house": "8",
+        "image": "/images/GivenDevices/Laptop.png",
+        "name": "laptop",
+        "owner": "1",
+        "room": "9",
+        "trigger": "On",
+        "watts": "80.0",
+        "createdAt": "2016-03-07T19:47:56.278Z",
+        "updatedAt": "2016-03-07T19:54:14.572Z",
+        "id": 35
+      },
+      {
+        "house": "8",
+        "image": "/images/house/f9baf440-daf6-448e-8381-935ac4b85478.jpg",
+        "name": "troll",
+        "owner": "1",
+        "room": "9",
+        "trigger": "Off",
+        "watts": "80.0",
+        "createdAt": "2016-03-07T20:25:01.457Z",
+        "updatedAt": "2016-03-07T20:25:08.967Z",
+        "id": 37
+      }
+    ],
+    "house": [
+      {
+        "image": "customImage",
+        "name": "whateverthisis",
+        "owner": "1",
+        "url": "/images/house/e30c7849-8050-4f10-9190-ae96b65ba03d.jpg",
+        "zipCode": "90004",
+        "createdAt": "2016-03-07T01:46:49.537Z",
+        "updatedAt": "2016-03-07T01:46:49.537Z",
+        "id": 8
+      },
+      {
+        "image": "customImage",
+        "name": "fdasfasfdas",
+        "owner": "1",
+        "url": "/images/house/eb376076-8896-4b2e-a4e0-6a3295320786.jpg",
+        "zipCode": "90280",
+        "createdAt": "2016-03-07T02:49:49.587Z",
+        "updatedAt": "2016-03-07T02:49:49.587Z",
+        "id": 10
+      },
+      {
+        "image": "customImage",
+        "name": "gfdgfds",
+        "owner": "1",
+        "url": "/images/house/d7c4b0df-015e-471e-87f8-40f3b90a3fd5.jpg",
+        "zipCode": "90280",
+        "createdAt": "2016-03-07T03:10:40.779Z",
+        "updatedAt": "2016-03-07T03:10:40.779Z",
+        "id": 12
+      },
+      {
+        "image": "customImage",
+        "name": "taco",
+        "owner": "1",
+        "url": "/images/house/e031f81f-59dd-43ca-bb97-81849db48cc2.jpg",
+        "zipCode": "90280",
+        "createdAt": "2016-03-07T03:46:41.749Z",
+        "updatedAt": "2016-03-07T03:46:41.749Z",
+        "id": 14
+      }
+    ],
+    "rooms": [
+      {
+        "owner": "1",
+        "house": "8",
+        "name": "test",
+        "createdAt": "2016-03-07T19:47:23.137Z",
+        "updatedAt": "2016-03-07T19:47:23.137Z",
+        "id": 9
+      }
+    ],
+    "user": [
+      {
+        "password": "k",
+        "username": "k",
+        "createdAt": "2016-03-07T00:58:23.702Z",
+        "updatedAt": "2016-03-07T00:58:23.702Z",
+        "id": 1
+      }
+    ],
+    "file": [],
+    "upload": []
+  },
+  "schema": {
+    "devicelist": {
+      "name": {
+        "type": "string"
+      },
+      "image": {
+        "type": "string"
+      },
+      "watts": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "devices": {
+      "name": {
+        "type": "string"
+      },
+      "room": {
+        "type": "string"
+      },
+      "house": {
+        "type": "string"
+      },
+      "owner": {
+        "type": "string"
+      },
+      "image": {
+        "type": "string"
+      },
+      "watts": {
+        "type": "string"
+      },
+      "trigger": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "house": {
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "rooms": {
+      "name": {
+        "type": "string"
+      },
+      "house": {
+        "type": "string"
+      },
+      "owner": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "user": {
+      "username": {
+        "type": "string",
+        "unique": true
+      },
+      "password": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "file": {
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "upload": {
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    }
+  },
+  "counters": {
+    "devicelist": {
+      "id": 8
+    },
+    "devices": {
+      "id": 37
+    },
+    "house": {
+      "id": 14
+    },
+    "rooms": {
+      "id": 9
+    },
+    "user": {
+      "id": 1
+    },
+    "file": {},
+    "upload": {}
+  }
+}
