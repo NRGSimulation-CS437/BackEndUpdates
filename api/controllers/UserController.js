@@ -79,7 +79,7 @@ module.exports = {
         //this.loadtheshitup(req, res);
       }
 
-      return res.view('main');
+      return res.redirect('main');
 
       });
 
@@ -90,8 +90,10 @@ module.exports = {
 
 	logout: function (req, res) {
       req.session.valid = false;
-      console.log('loged out :' + req.session.id);
-      return res.view('main');
+      console.log('logged out :' + req.session.id);
+        console.log( req.session)
+
+      return res.redirect('homepage');
 
   	} 
 
