@@ -1,0 +1,47 @@
+This is so you can add a fucken Devices to the rooms
+  <form action="/x/deviceadd" method="post">
+    Device name :<br>
+    <input type="text" name="name" value=""><br>
+    Device image:<br>
+    <input type="text" name="image" value=""><br>
+    Device Watts:<br>
+    <input type="text" name="watts" value=""><br>
+    Device switch?LOL:<br>
+    <input type="text" name="trigger" value=""><br>
+    <input type="hidden" name="id" value="<%=id%>" >
+    <input type="hidden" name="room" value="<%=room%>" >
+
+    <input type="submit" value="Submit">
+	</form> 
+
+
+<br><br><br><br><br>
+bellow is the view for all the rooms for this fucker.
+<br><br><br><br>
+
+<% if (req.session.devices.length > 0) { %>
+
+    <% _.each(req.session.devices, function (corndog) { %>
+    <br>
+    <li>the Name : <%= corndog.name %></li>
+    <li>the Ownwer : <%= corndog.owner %></li>
+    <li>the House : <%= corndog.room %></li>
+    <li>the Name : <%= corndog.house %></li>
+    <li>the Ownwer : <%= corndog.room %></li>
+    <li>the House : <%= corndog.image %></li>
+    <li>the Name : <%= corndog.watts %></li>
+    <li>the Ownwer : <%= corndog.trigger %></li>
+    <li>crated at : <%= corndog.createdAt %></li>
+    <li>updated at: <%= corndog.updatedAt %></li>
+    <a href="/x/devicedelete?name=<%= corndog.name %>&id=<%=id%>&room=<%= corndog.room %>">Destroy</a>
+
+    <br>
+    -----------------------------------------
+    <% }) %>
+
+
+<% } else { %>
+
+You have no houses you freake deadbeat!!!!
+
+<% } %>

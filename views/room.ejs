@@ -1,0 +1,35 @@
+This is so you can add a fucken rooms to the house
+  <form action="/x/roomadd" method="post">
+    Rooms name :<br>
+    <input type="text" name="name" value=""><br>
+    <input type="hidden" name="id" value="<%=id%>" >
+    <input type="submit" value="Submit">
+	</form> 
+
+
+<br><br><br><br><br>
+bellow is the view for all the rooms for this fucker.
+<br><br><br><br>
+
+<% if (req.session.rooms.length > 0) { %>
+
+    <% _.each(req.session.rooms, function (corndog) { %>
+    <br>
+    <li>the Name : <%= corndog.name %></li>
+    <li>the Ownwer : <%= corndog.owner %></li>
+    <li>the House : <%= corndog.house %></li>
+    <li>crated at : <%= corndog.createdAt %></li>
+    <li>updated at: <%= corndog.updatedAt %></li>
+    <a href="/x/roomdelete?name=<%= corndog.name %>&id=<%=id%>">Destroy</a>|
+    <a href="/x/devicereturnAll?name=<%= corndog.name %>&id=<%=id%>&room=<%=corndog.name%>">View devices</a>
+
+    <br>
+    -----------------------------------------
+    <% }) %>
+
+
+<% } else { %>
+
+You have no houses you freake deadbeat!!!!
+
+<% } %>

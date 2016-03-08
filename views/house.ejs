@@ -19,13 +19,19 @@ bellow is the view for all the houses for this fucker.
     <li>the Image : <%= corndog.image %></li>
     <li>the Name : <%= corndog.name %></li>
     <li>the Ownwer : <%= corndog.owner %></li>
+    <li>the id : <%= corndog.id %></li>
+    <li>crated at : <%= corndog.createdAt %></li>
+    <li>updated at: <%= corndog.updatedAt %></li>
+    <a href="/x/housedelete?id=<%= corndog.id %>">Destroy</a>|
+    <a href="/x/roomreturnAll?id=<%= corndog.id %>">Rooms</a>
     <br>
+
     -----------------------------------------
     <% }) %>
 
 
 <% } else { %>
 
-You have no houses you freake deadbeat!!!!
+You have no rooms you freake deadbeat!!!!
 
 <% } %>
