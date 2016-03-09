@@ -55,25 +55,7 @@
 			<!--end of login fields--->
 
 			<!--start of register-->
-			<div class="registerForm">
-				<div class="field">
-					<input type="text" id="fieldUser" class="input" required pattern=.*\S.* />
-					<label for="fieldUser" class="label">Create Username</label>
-				</div>
-				<div class="field">
-					<input type="password" id="fieldPassword" class="input" required pattern=.*\S.* />
-					<label for="fieldPassword" class="label">Password</label>
-				</div>
-				<div class="field">
-					<input type="password" id="fieldPassword" class="input" required pattern=.*\S.* />
-					<label for="fieldPassword" class="label">Re-enter Password</label>
-				</div>
-				<div class="field">
-					<input type="submit" name="Submit">
-				</div>
-
-			</div>
-
+			<%- partial ('register.ejs') %>
 			<!--end of Register-->
 
 			<div class="profile__footer">

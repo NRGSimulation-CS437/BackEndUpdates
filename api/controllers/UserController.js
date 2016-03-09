@@ -32,15 +32,23 @@ module.exports = {
 
 
   	add: function (req, res) {
-        console.log(req.param('username') + " : " + req.param('password') );
-      User.create({ username : req.param('username') , password : req.param('password') }).exec(function createdCB(err, created){
-        console.log('I think we created him ' + created );
-        console.log(created);
-        req.session.valid = true;
-        req.session.identifier = created.id;
-        req.session.username = created.username;
-        return res.redirect('main');
-
+      console.log("adding the user");
+      console.log(req.param('username') + " : " + req.param('password') );
+        User.create({ username : req.param('username') , password : req.param('password') }).exec(function createdCB(err, created){
+        if(err){
+          return res.redirect('main');
+        }else{
+          console.log('I think we created him ' + created );
+          console.log(created);
+          req.session.valid = true;
+          req.session.identifier = created.id;
+          req.session.username = created.username;
+          req.session.houses = [];
+          req.session.houses = [];
+          req.session.devices = [];
+          req.session.rooms = [];
+          return res.redirect('main');
+        }
       });
 
   	},
@@ -76,10 +84,19 @@ module.exports = {
         req.session.valid = true;
         req.session.identifier = temp[0].id;
         req.session.username = temp[0].username;
-        //this.loadtheshitup(req, res);
-      }
+        House.find({where: {owner:temp[0].id}}).exec(function findHouses(err, tempH){
+          if(err){
+            req.session.houses = [];
+            return res.redirect('main');
 
-      return res.redirect('main');
+          }
+          console.log(tempH);
+          console.log(tempH.length);
+          req.session.houses = tempH;
+          return res.redirect('main');
+
+        });
+      }
 
       });
 
@@ -90,6 +107,9 @@ module.exports = {
 
 	logout: function (req, res) {
       req.session.valid = false;
+      req.session.houses = [];
+      req.session.devices = [];
+      req.session.rooms = [];
       console.log('logged out :' + req.session.id);
         console.log( req.session)
 

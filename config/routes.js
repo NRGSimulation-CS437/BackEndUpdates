@@ -46,15 +46,15 @@ module.exports.routes = {
 
   'post /x/deviceadd': 'DevicesController.add',
   'get /x/devicedelete': 'DevicesController.delete',
-  'get /x/devicedreturnAll': 'DevicesController.returnAll',
+  'get /x/devicereturnAll': 'DevicesController.returnAll',
 
   'post /x/houseadd': 'HouseController.add',
   'get /x/housedelete': 'HouseController.delete',
   'get /x/housereturnAll': 'HouseController.returnAll',
 
-  'post /x/roomadd': 'RoomController.add',
-  'get /x/roomdelete': 'RoomController.delete',
-  'get /x/roomreturnAll': 'RoomController.returnAll',
+  'post /x/roomadd': 'RoomsController.add',
+  'get /x/roomdelete': 'RoomsController.delete',
+  'get /x/roomreturnAll': 'RoomsController.returnAll',
 
   'post /x/useradd': 'UserController.add',
   'post /x/userdelete': 'UserController.delete',

@@ -15,9 +15,18 @@ module.exports = {
 
 
   	delete: function (req, res) {
-    	return res.json({
-      		todo: 'delete() is not implemented yet!'
-    	});
+      House.destroy({ id : req.param('id') }).exec(function createdCB(err, created){
+        if(err){
+          return res.redirect('main');
+        }
+        House.find({where: {owner:req.session.identifier}}).exec(function findHouses(err, tempH){
+          console.log(tempH);
+          console.log(tempH.length);
+          req.session.houses = tempH;
+          return res.redirect('main');
+
+        });
+      });
   	},
 
 
