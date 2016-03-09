@@ -23,14 +23,13 @@
 
 
     <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-
-    <script src="scripts/modernizr.js"></script>
+0
+    <script src="js/homepageJs/modernizr.js"></script>
 
     <script type="text/javascript" src="//use.typekit.net/khi6tzf.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-
 
 </head>
 <body background="images/loginBack.jpg" class="new-home">
@@ -61,7 +60,6 @@
 </header>
 <!-- end of header--->
 
-
 <section class="slider">
     <div class="container">
         <div class="addRooms">
@@ -72,8 +70,15 @@
                     <label for="fieldUser" class="label">House Name</label>
                 </div>
                 <div class="field">
-                    <input type="text" id="fieldPassword"  name="image" class="input" required pattern=.*\S.* />
-                    <label for="fieldPassword" class="label">House Image</label>
+                    <!--<input type="text" id="fieldPassword"  name="image" class="input" required pattern=.*\S.* />-->
+                    <!--<label for="fieldPassword" class="label">House Image</label>-->
+
+                    <select name="image" class="input">
+                        <option value="/images/HousesGiven/Apartment.png">Apartment</option>
+                        <option value="/images/HousesGiven/Beach House.png">Beach House</option>
+                        <option value="/images/HousesGiven/Cabin in the Woods.png">Cabin in the Woods</option>
+                        <option value="/images/HousesGiven/RV.png">RV</option>
+                    </select>
                 </div>
                 <div class="btn btn-primary">
                     <input type="submit" name="Submit" style="background: transparent;">
@@ -91,8 +96,9 @@
 
                     <div class="item-caption">
                         <div id="myImage">
-                            <img src="/images/GivenHouses/<%= corndog.image %>" alt="SliderItem" />
+                            <img src="/<%= corndog.image %>" alt="SliderItem" />
                         </div>
+
                         <h2><%= corndog.name%></h2>
                         <p style="font-size: 30px;">Owner:<%= corndog.owner %></p>
                         <a href="/x/housedelete?id=<%= corndog.id %>">Destroy</a>|
@@ -190,25 +196,25 @@
 <!--<script src="scripts/jquery.dotdotdot.min.js"></script>-->
 <!--<script src="scripts/jquery.validate.js"></script>-->
 
-<script src="scripts/jquery.bookblock.js"></script>
-<script src="scripts/main.js"></script>
-<script src="scripts/jquery-2.0.0.min.js"></script>
-<script src="scripts/jquery-migrate-1.1.1.min.js"></script>
+<script src="js/homepageJs/jquery.bookblock.js"></script>
+<script src="js/homepageJs/main.js"></script>
+<script src="js/homepageJs/jquery-2.0.0.min.js"></script>
+<script src="js/homepageJs/jquery-migrate-1.1.1.min.js"></script>
 
 <!--<script src="scripts/affix.js"></script>-->
 <!--<script src="scripts/alert.js"></script>-->
 <!--<script src="scripts/dropdown.js"></script>-->
-<script src="scripts/tooltip.js"></script>
+<script src="js/homepageJs/tooltip.js"></script>
 <!--<script src="scripts/modal.js"></script>-->
-<script src="scripts/transition.js"></script>
-<script src="scripts/button.js"></script>
-<script src="scripts/popover.js"></script>
-<script src="scripts/carousel.js"></script>
-<script src="scripts/scrollspy.js"></script>
+<script src="js/homepageJs/transition.js"></script>
+<script src="js/homepageJs/button.js"></script>
+<script src="js/homepageJs/popover.js"></script>
+<<script src="js/homepageJs/carousel.js"></script>
+<script src="js/homepageJs/scrollspy.js"></script>
 
 <!-- Added for changes specified in Saul Home Page -->
-<script src="scripts/slick.min.js"></script>
-<script src="scripts/new-home.js"></script>
+<script src="js/homepageJs/slick.min.js"></script>
+<script src="js/homepageJs/new-home.js"></script>
 
 <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
 </script>
