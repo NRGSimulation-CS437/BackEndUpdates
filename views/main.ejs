@@ -10,14 +10,8 @@ req.session.valid = false;
 
 
 <% } else { %>
-Yeah you are cool session has been recorded
-<br>
-you are logged in as : <%= req.session.username %>
-<br>
-your id is : <%= req.session.identifier %>
-<br>
+
 <%- partial ('house.ejs') %>
 
-<br>
-<a href='/x/logout'>logout</a>
+
 <% } %>

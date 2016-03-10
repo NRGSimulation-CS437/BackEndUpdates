@@ -1,0 +1,177 @@
+.my-slider {
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    width: 50%;
+    height: auto;
+    max-width: 100%;
+    overflow: hidden; }
+.my-slider ul.slick-dots {
+    display: block;
+    list-style: none;
+    margin-top: 15px;
+    padding: 0;
+    text-align: center; }
+.my-slider ul.slick-dots li {
+    box-sizing: border-box;
+    background: #2C2C2C;
+    border: 1px solid #2C2C2C;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 100%;
+    margin: 0 10px 0 0;
+    height: 12px;
+    width: 12px;
+    padding-top: -10px; }
+.my-slider ul.slick-dots li.slick-active button {
+    background: white; }
+.my-slider ul.slick-dots button {
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    background: #2C2C2C;
+    text-indent: 100%;
+    overflow: hidden;
+    border-radius: 100%;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    outline: none; }
+.my-slider .prev-nav,
+.my-slider .next-nav {
+    border-style: solid;
+    cursor: pointer;
+    position: absolute;
+    overflow: hidden;
+    font-size: 20px;
+    width: 1.5em;
+    height: 1.4em;
+    border-color: #ffffff;
+    border-width: 3px 3px 0 0;
+    top: 45%;
+    z-index: 3; }
+.my-slider .prev-nav:hover,
+.my-slider .next-nav:hover {
+    border-color: #2C2C2C; }
+.my-slider .prev-nav {
+    -webkit-transform: rotate(225deg);
+    transform: rotate(225deg);
+    left: 20px; }
+.my-slider .next-nav {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    right: 20px; }
+.my-slider-slider .main-slider {
+    width: 100%; }
+.my-slider .slide-item {
+    padding-top: 0px;
+    width: 100%; }
+.my-slider .slide-item img {
+    max-width: 0%;
+    width: 100%;
+    height: 500px;
+    max-height: 100%; }
+.my-slider .slide-item h2 {
+    color: white;
+    font-family: 'futura-bold';
+    font-size: 52px;
+    margin-top: 0;
+    text-transform: uppercase;
+    text-align: center; }
+.my-slider .slide-item p {
+    color: white; }
+.my-slider .slide-item a {
+    border: 3px solid white;
+    color: white;
+    display: block;
+    font-size: 30px;
+    line-height: 18px;
+    font-family: 'Lato';
+    margin: 0 auto;
+    padding: 5px 0 8px;
+    text-align: center;
+    width: 300px; }
+.my-slider .slide-item .item-caption {display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    /*it can be fixed too*/
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    max-width: 100%;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    z-index: 1;
+    height: 100%;}
+.my-slider .slide-item .item-caption #myImage img{
+    display: table-cell;
+    vertical-align: middle;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    max-width: 100%;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+    width: 50%;
+    z-index: 1;
+    height: 250px;
+}
+
+
+
+
+
+@media (max-width: 992px) {
+    .my-slider .slide-item {
+        display: block; }
+    .my-slider .slide-item .item-caption {
+        top: 35%; } }
+
+@media (max-width: 768px) {
+    .my-slider .slide-item .item-caption {
+        background: #2C2C2C;
+        display: block;
+        max-width: 100%;
+        padding: 15px 0;
+        position: relative;
+        left: 0;
+        right: 0; }
+    .my-slider .slide-item h2 {
+        font-size: 16pt;
+        text-align: center; }
+    .my-slider .slide-item a {
+        border-width: 2px;
+        display: table;
+        font-size: 17pt;
+        line-height: 14pt;
+        width: auto; }
+    .my-slider .prev-nav,
+    .my-slider .next-nav {
+        top: 30%; } }
+
+@media (max-width: 480px) {
+    .my-slider .prev-nav,
+    .my-slider .next-nav {
+        top: 20%; } }
+.addRooms
+{
+    border: 1px;
+    margin: 7px 0px 10px 0px;
+    position: absolute;
+    z-index: 1;
+    width: 20%;
+    height: 55%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.addRooms h2
+{
+    color: white;
+
+}
+
