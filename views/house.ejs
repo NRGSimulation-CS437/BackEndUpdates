@@ -23,7 +23,7 @@
 
 
     <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-0
+
     <script src="js/homepageJs/modernizr.js"></script>
 
     <script type="text/javascript" src="//use.typekit.net/khi6tzf.js"></script>
@@ -60,6 +60,8 @@
 </header>
 <!-- end of header--->
 
+<% if (req.session.houses.length > 0) { %>
+
 <section class="slider">
     <div class="container">
         <div class="addRooms">
@@ -74,10 +76,10 @@
                     <!--<label for="fieldPassword" class="label">House Image</label>-->
 
                     <select name="image" class="input">
-                        <option value="/images/HousesGiven/Apartment.png">Apartment</option>
-                        <option value="/images/HousesGiven/Beach House.png">Beach House</option>
-                        <option value="/images/HousesGiven/Cabin in the Woods.png">Cabin in the Woods</option>
-                        <option value="/images/HousesGiven/RV.png">RV</option>
+                        <option value="/images/GivenHouses/Apartment.png">Apartment</option>
+                        <option value="/images/GivenHouses/Beach House.png">Beach House</option>
+                        <option value="/images/GivenHouses/Cabin in the Woods.png">Cabin in the Woods</option>
+                        <option value="/images/GivenHouses/RV.png">RV</option>
                     </select>
                 </div>
                 <div class="btn btn-primary">
@@ -96,7 +98,7 @@
 
                     <div class="item-caption">
                         <div id="myImage">
-                            <img src="/<%= corndog.image %>" alt="SliderItem" />
+                            <img src="<%= corndog.image %>" alt="SliderItem" />
                         </div>
 
                         <h2><%= corndog.name%></h2>
@@ -110,6 +112,36 @@
         </div>
     </div>
 </section>
+
+<% } else { %>
+
+<section>
+
+    <div class="container">
+            <h2>Add House</h2>
+            <form action="/x/houseadd" method="post">
+                <div class="field">
+                    <input type="text" id="fieldUser" name="name" class="input" required pattern=.*\S.* />
+                    <label for="fieldUser" class="label">House Name</label>
+                </div>
+                <div class="field">
+                    <!--<input type="text" id="fieldPassword"  name="image" class="input" required pattern=.*\S.* />-->
+                    <!--<label for="fieldPassword" class="label">House Image</label>-->
+
+                    <select name="image" class="input">
+                        <option value="/images/GivenHouses/Apartment.png">Apartment</option>
+                        <option value="/images/GivenHouses/Beach House.png">Beach House</option>
+                        <option value="/images/GivenHouses/Cabin in the Woods.png">Cabin in the Woods</option>
+                        <option value="/images/GivenHouses/RV.png">RV</option>
+                    </select>
+                </div>
+                <div class="btn btn-primary">
+                    <input type="submit" name="Submit" style="background: transparent;">
+                </div>
+            </form>
+    </div>
+</section>
+<% } %>
 
 
 
