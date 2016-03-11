@@ -41,13 +41,13 @@
                 <div class="header-wrapper">
                     <div class="logo">
                         <a href="../">
-                            <img src="../images/logo.png" alt="Logo" /> </a>
+                            <img src="../images/whiteNRG.png" alt="Logo" /> </a>
                     </div><div class="right-wrapper">
                         <div class="top-menu">
                             <ul>
                                 <li class="submenu-switch"><a style="color:white;" href='/x/logout'>Log Out</a>
                                 </li>
-                                <li class="submenu-switch"><a style="color:white;" href="../main">Back To Homesr</a>
+                                <li class="submenu-switch"><a style="color:white;" href="../main">Back To Houses View</a>
                                 </li>
                             </ul>
                         </div>
@@ -65,31 +65,38 @@
 <section class="slider">
     <div class="container">
         <div class="addRooms">
-            <h2>Add House</h2>
+            <h2>Add Device</h2>
             <form action="/x/deviceadd" method="post">
                 <div class="field">
                     <input type="text" id="fieldUser" name="name" class="input" required pattern=.*\S.* />
                     <label for="fieldUser" class="label">Device Name</label>
                 </div>
                 <div class="field">
-                    <!--<input type="text" id="fieldPassword"  name="image" class="input" required pattern=.*\S.* />-->
-                    <!--<label for="fieldPassword" class="label">House Image</label>-->
-
-                    <select name="image" class="input">
-                        <option value="../images/GivenDevices/Coffee Maker.png">Coffee Maker</option>
-                        <option value="../images/GivenDevices/Laptop.png">Laptop</option>
-                        <option value="../images/GivenDevices/Light Bulb.png">Light Bulb</option>
-                        <option value="../images/GivenDevices/Microwave.png">Microwave</option>
-                        <option value="../images/GivenDevices/PC.png">PC</option>
-                        <option value="../images/GivenDevices/Phone Charger.png">Phone Charger</option>
-                        <option value="../images/GivenDevices/Refrigerator.png">Refrigerator</option>
-                    </select>
-                </div>
-                <div class="field">
                     <input type="text" id="fieldUser" name="watts" class="input" required pattern=.*\S.* />
                     <label for="fieldUser" class="label">Watts</label>
                     <input type="hidden" name="id" value="<%=id%>" >
                     <input type="hidden" name="room" value="<%=room%>" >
+                </div>
+                <div class="field">
+                    <!--<input type="text" id="fieldPassword"  name="image" class="input" required pattern=.*\S.* />-->
+                    <!--<label for="fieldPassword" class="label">House Image</label>-->
+
+                    <select name="image" class="input">
+                        <option value="/images/GivenDevices/Coffee Maker.png">Coffee Maker</option>
+                        <option value="/images/GivenDevices/Laptop.png">Laptop</option>
+                        <option value="/images/GivenDevices/Light Bulb.png">Light Bulb</option>
+                        <option value="/images/GivenDevices/Microwave.png">Microwave</option>
+                        <option value="/images/GivenDevices/PC.png">PC</option>
+                        <option value="/images/GivenDevices/Phone Charger.png">Phone Charger</option>
+                        <option value="/images/GivenDevices/Refrigerator.png">Refrigerator</option>
+                    </select>
+                </div>
+
+                <div class ="field">
+                    <select name="trigger" value="" class="input">
+                        <option value="Off">Off</option>
+                        <option value="On">On</option>
+                    </select>
                 </div>
                 <div class="btn btn-primary">
                     <input type="submit" name="Submit" style="background: transparent;">
@@ -107,11 +114,11 @@
 
                     <div class="item-caption">
                         <div id="myImage">
-                            <img src="<%= corndog.image %>" alt="SliderItem" />
+                            <img src="/..<%= corndog.image %>" alt="SliderItem" />
                         </div>
 
                         <h2><%= corndog.name %></h2>
-                        <p style="font-size: 30px;">Owner:<%= corndog.watts %></p>
+                        <p style="font-size: 30px;"><%= corndog.watts %> Watt(s)</p>
                         <a href="/x/devicedelete?name=<%= corndog.name %>&id=<%=id%>&room=<%= corndog.room %>">Destroy</a>
 
 
@@ -139,13 +146,13 @@
                 <!--<label for="fieldPassword" class="label">House Image</label>-->
 
                 <select name="image" class="input">
-                    <option value="../images/GivenDevices/Coffee Maker.png">Coffee Maker</option>
-                    <option value="../images/GivenDevices/Laptop.png">Laptop</option>
-                    <option value="../images/GivenDevices/Light Bulb.png">Light Bulb</option>
-                    <option value="../images/GivenDevices/Microwave.png">Microwave</option>
-                    <option value="../images/GivenDevices/PC.png">PC</option>
-                    <option value="../images/GivenDevices/Phone Charger.png">Phone Charger</option>
-                    <option value="../images/GivenDevices/Refrigerator.png">Refrigerator</option>
+                    <option value="/images/GivenDevices/Coffee Maker.png">Coffee Maker</option>
+                    <option value="/images/GivenDevices/Laptop.png">Laptop</option>
+                    <option value="/images/GivenDevices/Light Bulb.png">Light Bulb</option>
+                    <option value="/images/GivenDevices/Microwave.png">Microwave</option>
+                    <option value="/images/GivenDevices/PC.png">PC</option>
+                    <option value="/images/GivenDevices/Phone Charger.png">Phone Charger</option>
+                    <option value="/images/GivenDevices/Refrigerator.png">Refrigerator</option>
                 </select>
             </div>
             <div class="field">
@@ -168,82 +175,6 @@
 </section>
 <% } %>
 
-
-
-
-<!---replace <div id="footer" with this <footer> and everything inside, dont forget to change replace new-home.css-->
-<footer>
-    <div class="container">
-        <div class="row " style="width:100%; padding-left:200px">
-            <div class="col-md-8 col-sm-12 footer-left">
-                <div class="row">
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <div class="footer-col">
-                            <div class="list-title" data-toggleable>
-                                <h4>Lorem ipsum dolor sit amet</h4> </div>
-                            <div class="list-content">
-                                <ul class="footer-list">
-                                    <li>
-                                        <a href="/site/es/mundo-saul/campanas.html">Campañas</a>
-                                    </li><li>
-                                        <a href="/site/es/mundo-saul/eventos-saul.html">Eventos</a>
-                                    </li><li>
-                                        <a href="/site/es/mundo-saul/galardones.html">Prensa y galardones</a>
-                                    </li><li>
-                                        <a href="/site/es/mundo-saul/marcas-exclusivas.html">Marcas Exclusivas</a>
-                                    </li><li>
-                                        <a href="/site/es/mundo-saul/ubicaciones.html">Ubicaciones</a>
-                                    </li></ul>
-                            </div>
-                        </div>
-                    </div><div class="col-md-4 col-sm-4 col-xs-12">
-                        <div class="footer-col">
-                            <div class="list-title" data-toggleable>
-                                <h4>Lorem ipsum dolor sit amet</h4> </div>
-                            <div class="list-content">
-                                <ul class="footer-list">
-                                    <li>
-                                        <a href="/site/es/quienes-somos.html">Historia</a>
-                                    </li><li>
-                                        <a href="/site/es/quienes-somos/Valores.html">Valores</a>
-                                    </li><li>
-                                        <a href="/site/es/quienes-somos/proyectos-sociales.html">Proyectos Sociales</a>
-                                    </li><li>
-                                        <a href="/site/es/quienes-somos/manifiesto.html">Manifiesto</a>
-                                    </li><li>
-                                        <a href="/site/es/quienes-somos/faq.html">Preguntas frecuentes</a>
-                                    </li></ul>
-                            </div>
-                        </div>
-                    </div><div class="col-md-4 col-sm-4 col-xs-12">
-                        <div class="footer-col">
-                            <div class="list-title" data-toggleable>
-                                <h4>Lorem ipsum dolor sit amet</h4> </div>
-                            <div class="list-content">
-                                <ul class="footer-list">
-                                    <li>
-                                        <a href="/site/es/contacto/contacto-empleos-y-modelos.html">Empleo, Pasantías, Casting de modelos</a>
-                                    </li><li>
-                                        <a href="/site/es/contacto.html">Contáctanos</a>
-                                    </li></ul>
-                            </div>
-                        </div>
-                    </div></div>
-            </div>
-
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-sm-12 col-xs-12">
-                <div class="copyright">
-                    <ul>
-                        <li>© 2016 NRG | All rights reserved</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-<!--end of footer-->
 
 <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>

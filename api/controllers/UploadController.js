@@ -6,9 +6,7 @@
  */
 
 module.exports = {
-
     index: function (req,res){
-
         res.writeHead(200, {'content-type': 'text/html'});
         res.end(
             '<form action="http://localhost:1337/upload/upload" enctype="multipart/form-data" method="post">'+

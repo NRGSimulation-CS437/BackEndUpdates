@@ -41,13 +41,13 @@
                 <div class="header-wrapper">
                     <div class="logo">
                         <a href="../">
-                            <img src="../images/logo.png" alt="Logo" /> </a>
+                            <img src="../images/whiteNRG.png" alt="Logo" /> </a>
                     </div><div class="right-wrapper">
                         <div class="top-menu">
                             <ul>
                                 <li class="submenu-switch"><a style="color:white;" href='/x/logout'>Log Out</a>
                                 </li>
-                                <li class="submenu-switch"><a style="color:white;" href="../main">Back to Homes</a>
+                                <li class="submenu-switch"><a style="color:white;" href="../main">Back to Houses View</a>
                                 </li>
                             </ul>
                         </div>
@@ -88,11 +88,8 @@
 
                     <div class="item-caption">
                         <h2><%= corndog.name%></h2>
-                        <p style="font-size: 30px;">Owner: <%= corndog.owner %></p>
-                        <p style="font-size: 30px;">House:<%= corndog.house %></p>
-
                         <a href="/x/roomdelete?name=<%= corndog.name %>&id=<%=id%>">Destroy</a>|
-                        <a href="/x/devicereturnAll?name=<%= corndog.name %>&id=<%=id%>&room=<%=corndog.name%>">View devices</a>
+                        <a href="/x/devicereturnAll?name=<%= corndog.name %>&id=<%=id%>&room=<%=corndog.id%>">View devices</a>
                     </div>
                 </div>
                 <% }) %>
@@ -123,80 +120,6 @@
 
 
 
-
-<!---replace <div id="footer" with this <footer> and everything inside, dont forget to change replace new-home.css-->
-<footer>
-    <div class="container">
-        <div class="row " style="width:100%; padding-left:200px">
-            <div class="col-md-8 col-sm-12 footer-left">
-                <div class="row">
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <div class="footer-col">
-                            <div class="list-title" data-toggleable>
-                                <h4>Lorem ipsum dolor sit amet</h4> </div>
-                            <div class="list-content">
-                                <ul class="footer-list">
-                                    <li>
-                                        <a href="/site/es/mundo-saul/campanas.html">Campañas</a>
-                                    </li><li>
-                                        <a href="/site/es/mundo-saul/eventos-saul.html">Eventos</a>
-                                    </li><li>
-                                        <a href="/site/es/mundo-saul/galardones.html">Prensa y galardones</a>
-                                    </li><li>
-                                        <a href="/site/es/mundo-saul/marcas-exclusivas.html">Marcas Exclusivas</a>
-                                    </li><li>
-                                        <a href="/site/es/mundo-saul/ubicaciones.html">Ubicaciones</a>
-                                    </li></ul>
-                            </div>
-                        </div>
-                    </div><div class="col-md-4 col-sm-4 col-xs-12">
-                        <div class="footer-col">
-                            <div class="list-title" data-toggleable>
-                                <h4>Lorem ipsum dolor sit amet</h4> </div>
-                            <div class="list-content">
-                                <ul class="footer-list">
-                                    <li>
-                                        <a href="/site/es/quienes-somos.html">Historia</a>
-                                    </li><li>
-                                        <a href="/site/es/quienes-somos/Valores.html">Valores</a>
-                                    </li><li>
-                                        <a href="/site/es/quienes-somos/proyectos-sociales.html">Proyectos Sociales</a>
-                                    </li><li>
-                                        <a href="/site/es/quienes-somos/manifiesto.html">Manifiesto</a>
-                                    </li><li>
-                                        <a href="/site/es/quienes-somos/faq.html">Preguntas frecuentes</a>
-                                    </li></ul>
-                            </div>
-                        </div>
-                    </div><div class="col-md-4 col-sm-4 col-xs-12">
-                        <div class="footer-col">
-                            <div class="list-title" data-toggleable>
-                                <h4>Lorem ipsum dolor sit amet</h4> </div>
-                            <div class="list-content">
-                                <ul class="footer-list">
-                                    <li>
-                                        <a href="/site/es/contacto/contacto-empleos-y-modelos.html">Empleo, Pasantías, Casting de modelos</a>
-                                    </li><li>
-                                        <a href="/site/es/contacto.html">Contáctanos</a>
-                                    </li></ul>
-                            </div>
-                        </div>
-                    </div></div>
-            </div>
-
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-sm-12 col-xs-12">
-                <div class="copyright">
-                    <ul>
-                        <li>© 2016 NRG | All rights reserved</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-<!--end of footer-->
 
 <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
